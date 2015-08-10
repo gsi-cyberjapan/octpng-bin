@@ -8,5 +8,9 @@ $ wget http://cyberjapandata.gsi.go.jp/xyz/kunijiban/mokuroku.csv.gz
 $ gzcat mokuroku.csv.gz | ruby map.rb 15 | sort | ruby reduce.rb
 ```
 
+# Example
+- [kunijiban](https://hfu.github.io/octpng-bin/kunijiban.html)
+- [ort](https://hfu.github.io/octpng-bin/ort.html)
+
 # See also
 - http://github.com/hfu/octpng-spec

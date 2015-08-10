@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0"/>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<script src="http://handygeospatial.github.io/mapsites/js/leaflet-hash.js"></script>
+<script src="http://handygeospatial.github.io/mapsites/js/TileLayer.GeoJSON.js"></script>
+<script src="http://handygeospatial.github.io/mapsites/js/corslite.js"></script>
+<style>
+body {padding: 0; margin: 0}
+html, body, #mapdiv {height: 100%; width: 100%;}
+.leaflet-container {background: #fff;}
+</style>
+</head>
+<body>
+<div id="mapdiv">
+<script>
+var std = L.tileLayer(
+  'http://cyberjapandata.gsi.go.jp/xyz/ort/{z}/{x}/{y}.jpg', {
+    attribution: "地理院"
+  });
+var oct = L.tileLayer(
+  './{z}/{x}/{y}.png', {
+    minZoom: 8, maxNativeZoom: 10, maxZoom: 18, opacity: 0.3
+  });
+
+var map = L.map('mapdiv', {
+  center: [35.722, 139.699], zoom: 8,
+  layers: [std, oct]});
+
+var hash = L.hash(map);
+L.control.layers({'地理院': std},
+  {'octpng': oct}).addTo(map);
+</script>
+</body>
+</html>
