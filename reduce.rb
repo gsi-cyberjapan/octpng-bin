@@ -22,5 +22,5 @@ while gets
     image[u, v] = ChunkyPNG::Color::rgb(255, 0, 0)
   end
   last = current
-  write(image, z, x, y)
 end
+write(image, z, x, y)
