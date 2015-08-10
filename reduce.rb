@@ -10,6 +10,7 @@ end
 
 current = [nil, nil, nil]
 last = [nil, nil, nil]
+(z, x, y, u, v) = [nil, nil, nil, nil, nil]
 image = ChunkyPNG::Image.new(256, 256)
 while gets
   (z, x, y, u, v) = $_.strip.split(',').map{|v| v.to_i}
