@@ -14,7 +14,7 @@ image = ChunkyPNG::Image.new(256, 256)
 while gets
   (z, x, y, u, v) = $_.strip.split(',').map{|v| v.to_i}
   current = [z, x, y]
-  if current == last
+  if current == last or last[0].nil?
     image[u, v] = ChunkyPNG::Color::rgb(255, 0, 0)
   else
     print "write #{z}/#{x}/#{y}.\n"
