@@ -24,7 +24,7 @@ var std = L.tileLayer(
   });
 var oct = L.tileLayer(
   './{z}/{x}/{y}.png', {
-    minZoom: 7, maxNativeZoom: 7, maxZoom: 14, opacity: 0.5
+    minZoom: 7, maxNativeZoom: 7, maxZoom: 14
   });
 var kunijiban = new L.TileLayer.GeoJSON(
   'http://cyberjapandata.gsi.go.jp/xyz/kunijiban/{z}/{x}/{y}.geojson', {
