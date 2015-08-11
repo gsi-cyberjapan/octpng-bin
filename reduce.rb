@@ -1,7 +1,7 @@
 require 'chunky_png'
 require 'fileutils'
 
-COLOR_TRUE = ChunkyPNG::Color::rgba(0, 255, 255, 64)
+COLOR_TRUE = ChunkyPNG::Color::rgba(224, 255, 255, 96)
 COLOR_FALSE = ChunkyPNG::Color::rgba(0, 0, 0, 128)
 def _new_image
   return ChunkyPNG::Image.new(256, 256, COLOR_FALSE)
@@ -15,6 +15,7 @@ def write(image, zxy)
   return _new_image
 end
 
+_new_image.save('404.png')
 current = [nil, nil, nil]
 last = [nil, nil, nil]
 (z, x, y, u, v) = [nil, nil, nil, nil, nil]

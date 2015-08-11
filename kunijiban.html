@@ -5,10 +5,10 @@
 <title></title>
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0"/>
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
-<script src="//cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-<script src="//handygeospatial.github.io/mapsites/js/leaflet-hash.js"></script>
-<script src="//handygeospatial.github.io/mapsites/js/TileLayer.GeoJSON.js"></script>
-<script src="//handygeospatial.github.io/mapsites/js/corslite.js"></script>
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<script src="http://handygeospatial.github.io/mapsites/js/leaflet-hash.js"></script>
+<script src="http://handygeospatial.github.io/mapsites/js/TileLayer.GeoJSON.js"></script>
+<script src="http://handygeospatial.github.io/mapsites/js/corslite.js"></script>
 <style>
 body {padding: 0; margin: 0}
 html, body, #mapdiv {height: 100%; width: 100%;}
@@ -24,7 +24,7 @@ var std = L.tileLayer(
   });
 var oct = L.tileLayer(
   './{z}/{x}/{y}.png', {
-    minZoom: 7, maxNativeZoom: 7, maxZoom: 14
+    minZoom: 7, maxNativeZoom: 7, maxZoom: 18, errorTileUrl: '404.png'
   });
 var kunijiban = new L.TileLayer.GeoJSON(
   'http://cyberjapandata.gsi.go.jp/xyz/kunijiban/{z}/{x}/{y}.geojson', {
