@@ -24,11 +24,8 @@ var std = L.tileLayer(
   });
 var oct = L.tileLayer(
   './{z}/{x}/{y}.png', {
-    minZoom: 8, maxNativeZoom: 10, maxZoom: 18, opacity: 0.3
+    minZoom: 8, maxNativeZoom: 10, maxZoom: 18, errorTileUrl: '404.png'
   });
-oct.on('load', function(e) {
-  oct.getContainer().style.imageRendering = 'pixelated';
-});
 
 var map = L.map('mapdiv', {
   center: [35.722, 139.699], zoom: 8,

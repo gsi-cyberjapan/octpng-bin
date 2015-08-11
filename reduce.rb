@@ -1,7 +1,8 @@
 require 'chunky_png'
 require 'fileutils'
 
-COLOR_TRUE = ChunkyPNG::Color::rgba(224, 255, 255, 96)
+#COLOR_TRUE = ChunkyPNG::Color::rgba(224, 255, 255, 96) # for kunijiban
+COLOR_TRUE = ChunkyPNG::Color::rgba(255, 255, 255, 0) # for ort
 COLOR_FALSE = ChunkyPNG::Color::rgba(0, 0, 0, 128)
 def _new_image
   return ChunkyPNG::Image.new(256, 256, COLOR_FALSE)
