@@ -5,12 +5,12 @@
 The following example creates octpng tile at z=7 from z=15 of mokuroku data.
 ```
 $ wget http://cyberjapandata.gsi.go.jp/xyz/kunijiban/mokuroku.csv.gz
-$ gzcat mokuroku.csv.gz | ruby map.rb 15 | sort | ruby reduce.rb
+$ gzcat mokuroku.csv.gz | ruby map.rb | sort | ruby reduce.rb
 ```
 
 # Example
-- [kunijiban](http://hfu.github.io/octpng-bin/kunijiban.html)
-- [ort](http://hfu.github.io/octpng-bin/ort.html)
+- [kunijiban](http://gsi-cyberjapan.github.io/octpng-bin/kunijiban.html)
+- [ort](http://gsi-cyberjapan.github.io/octpng-bin/ort.html)
 
 # See also
 - http://github.com/hfu/octpng-spec
